@@ -14,11 +14,13 @@ metadata:
   name: minio
   namespace: minio
 spec:
+  type: LoadBalancer
   ports:
   - port: 9000
     targetPort: 9000
   selector:
     app: minio
+
 ---
 apiVersion: apps/v1
 kind: Deployment
